@@ -1,0 +1,6 @@
+git init
+git remote add origin https://github.com/Ayogram/swiftspeed-logistiq.git
+git branch -M main
+git add .
+git commit -m "Update site files"
+git push -u origin main
