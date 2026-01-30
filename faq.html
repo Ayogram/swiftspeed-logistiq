@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>FAQ & Support — SwiftSpeed LogistiQ</title>
+<link rel="stylesheet" href="css/styles.css" />
+<link rel="stylesheet"
+ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+ <link rel="icon" type="image/jpeg" href="images/logoo.png">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+/* ===== FAQ PAGE ===== */
+
+.faq-hero {
+  background: linear-gradient(120deg,#0c7c84,#053c41);
+  color:white;
+  padding:80px 20px;
+  text-align:center;
+}
+
+.faq-layout {
+  max-width:1200px;
+  margin:80px auto;
+  display:grid;
+  grid-template-columns:1fr 460px;
+  gap:40px;
+}
+
+/* FAQ */
+
+.faq-list h2 {
+  margin-bottom:20px;
+}
+
+.faq-item {
+  background:white;
+  padding:20px 25px;
+  border-radius:14px;
+  margin-bottom:15px;
+  box-shadow:0 10px 30px rgba(0,0,0,.06);
+}
+
+/* ===== CHATBOT ===== */
+
+.chatbot-box {
+  background:white;
+  border-radius:18px;
+  box-shadow:0 15px 40px rgba(0,0,0,.15);
+  display:flex;
+  flex-direction:column;
+  height: calc(100vh - 220px);
+  position: sticky;
+  top: 120px;
+}
+
+.chat-header {
+  padding:18px;
+  font-weight:700;
+  background:#0c7c84;
+  color:white;
+}
+
+.chat-messages {
+  flex:1;
+  padding:18px;
+  overflow-y:auto;
+}
+
+.msg {
+  margin-bottom:14px;
+  max-width:85%;
+}
+
+.bot {
+  background:#eef7f7;
+  padding:12px 14px;
+  border-radius:14px;
+}
+
+.user {
+  background:#0c7c84;
+  color:white;
+  padding:12px 14px;
+  border-radius:14px;
+  margin-left:auto;
+}
+
+.chat-input {
+  display:flex;
+  border-top:1px solid #eee;
+}
+
+.chat-input input {
+  flex:1;
+  border:none;
+  padding:14px;
+  outline:none;
+}
+
+.chat-input button {
+  border:none;
+  background:#2f7fd3;
+  color:white;
+  padding:14px 22px;
+  cursor:pointer;
+  font-weight:700;
+  transition:.2s ease;
+}
+
+.chat-input button:hover{
+  background:#0b2d5a;
+}
+
+
+@media(max-width:900px){
+  .faq-layout{
+    grid-template-columns:1fr;
+  }
+
+  .chatbot-box{
+    position:relative;
+    height:600px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="container nav-inner">
+
+   <div class="nav-logo">
+  <img src="images/logo.jpg" alt="SwiftSpeed LogistiQ & Cargo Logo">
+</div>
+
+<button class="nav-toggle" aria-label="Toggle menu">
+  <i class="fa-solid fa-bars"></i>
+</button>
+
+
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="faq.html" class="active">FAQ</a></li>
+    </ul>
+
+    <div class="nav-social">
+      <a href="#" class="nav-icon"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#" class="nav-icon"><i class="fa-brands fa-facebook-f"></i></a>
+
+      
+      <a class="btn btn-primary btn-small" href="https://wa.me/2347039652564">
+        WhatsApp
+      </a>
+    </div>
+
+  </div>
+</nav>
+
+<section class="faq-hero">
+  <h1>FAQ & AI Support Assistant</h1>
+  <p>Ask about our logistics services, shipping routes, or operations.</p>
+</section>
+
+<section class="faq-layout">
+
+<!-- FAQ COLUMN -->
+<div class="faq-list">
+
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq-item">
+<strong>Which countries do you ship to?</strong>
+<p>We ship to Canada, USA, UK, EU countries, UAE, Ghana, Kenya, China, Turkey, and more.</p>
+</div>
+
+<div class="faq-item">
+<strong>Do you offer doorstep delivery?</strong>
+<p>Yes — we provide on-demand doorstep and door-to-door delivery worldwide.</p>
+</div>
+
+<div class="faq-item">
+<strong>Are you licensed?</strong>
+<p>Yes, SwiftSpeed LogistiQ is a registered export cargo company.</p>
+</div>
+
+<div class="faq-item">
+<strong>Where is your office located?</strong>
+<p>Block 6, Reality Plaza, Isheri Magodo, Ojodu Berger, Lagos.</p>
+</div>
+
+</div>
+
+<!-- CHATBOT COLUMN -->
+<div class="chatbot-box">
+
+<div class="chat-header">SwiftSpeed AI Assistant</div>
+
+<div class="chat-messages" id="chatMessages"></div>
+
+<div class="chat-input">
+  <input type="text" id="userInput" placeholder="Ask a logistics question..." />
+  <button onclick="sendMessage()">Send</button>
+</div>
+
+</div>
+
+</section>
+
+<script>
+const chatBox = document.getElementById("chatMessages");
+const input = document.getElementById("userInput");
+
+const fallback =
+"For detailed assistance, please contact us via WhatsApp or email.";
+
+/* GREETINGS */
+const greetings = ["hi","hello","hey","good morning","good afternoon","good evening","yo","howdy"];
+
+const greetingReply = "Hello 👋 How can I assist you today?";
+
+/* KNOWLEDGE BASE */
+const knowledge = [
+
+{
+keywords:["countries","ship","where"],
+answer:"We ship internationally to the USA, UK, Canada, Europe, UAE, Ghana, Kenya, China, Turkey and many other destinations."
+},
+
+{
+keywords:["lagos","nigeria"],
+answer:"Our operations hub is in Lagos, Nigeria — including NAHCO Aviation MMA Ikeja."
+},
+
+{
+keywords:["services","offer","do"],
+answer:"We offer international shipping, air and sea freight, procurement, customs clearance, courier services, doorstep delivery and cargo consolidation."
+},
+
+{
+keywords:["air freight"],
+answer:"We provide fast international air freight services for urgent shipments."
+},
+
+{
+keywords:["sea cargo","ship cargo"],
+answer:"Our sea freight handles bulk and containerized shipments worldwide."
+},
+
+{
+keywords:["customs","clearance"],
+answer:"We assist with import/export brokerage and documentation."
+},
+
+{
+keywords:["procurement"],
+answer:"We help clients source goods globally."
+},
+
+{
+keywords:["mission"],
+answer:"Our mission is to deliver reliable logistics experiences while offering exceptional market value."
+},
+
+{
+keywords:["vision"],
+answer:"Our vision is to become a globally trusted logistics brand based in Nigeria."
+},
+
+{
+keywords:["licensed","registered"],
+answer:"Yes — SwiftSpeed LogistiQ is fully licensed and registered."
+},
+
+{
+keywords:["founder"],
+answer:"SwiftSpeed LogistiQ is led by a visionary founder focused on logistics excellence."
+},
+
+{
+keywords:["door","doorstep"],
+answer:"We provide door-to-door delivery worldwide."
+},
+
+{
+keywords:["tracking"],
+answer:"For shipment tracking, please contact us via WhatsApp or email."
+},
+
+{
+keywords:["price","cost","quote"],
+answer:"Pricing depends on shipment details. For detailed assistance, please contact us via WhatsApp or email."
+},
+
+{
+keywords:["insurance"],
+answer:"Cargo insurance is available upon request."
+},
+
+{
+keywords:["contact","email","phone","whatsapp"],
+answer:"You can reach us via WhatsApp at +2347039652564 or email Swiftspeedlogistiq@yahoo.com."
+},
+
+{
+keywords:["office","address"],
+answer:"Our office is at Block 6, Reality Plaza, Isheri Magodo, Ojodu Berger, Lagos."
+},
+
+{
+keywords:["refund","complaint","lost","damaged","legal"],
+answer:"For detailed assistance, please contact us via WhatsApp or email."
+}
+
+];
+
+function addMessage(text, type){
+  const msg = document.createElement("div");
+  msg.className = "msg " + type;
+  msg.innerText = text;
+  chatBox.appendChild(msg);
+  chatBox.scrollTop = chatBox.scrollHeight;
+}
+
+function sendMessage(){
+  const text = input.value.trim();
+  if(!text) return;
+
+  addMessage(text,"user");
+  input.value="";
+
+  const lower = text.toLowerCase();
+
+  /* CHECK GREETINGS FIRST */
+  if(greetings.some(g => lower === g || lower.startsWith(g))){
+    setTimeout(()=> addMessage(greetingReply,"bot"),400);
+    return;
+  }
+
+  let reply = null;
+
+  for(let item of knowledge){
+    if(item.keywords.some(k => lower.includes(k))){
+      reply = item.answer;
+      break;
+    }
+  }
+
+  if(!reply){
+    reply = fallback;
+  }
+
+  setTimeout(()=> addMessage(reply,"bot"),500);
+}
+
+/* INITIAL MESSAGE */
+addMessage("Hello 👋 I’m SwiftSpeed AI. Ask me about our logistics services, shipping, or operations.","bot");
+</script>
+
+</body>
+</html>

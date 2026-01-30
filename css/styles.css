@@ -1,0 +1,3242 @@
+:root{
+ --primary:#2f7fd3;     /* logo blue */
+ --navy:#0b1f3f;        /* deep support blue */
+ --gold:#f5b700;
+}
+
+/* RESET */
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+ font-family:Arial,sans-serif;
+ color:#1f2a44;
+ line-height:1.6;
+ padding-bottom:85px;
+}
+
+/* ================= CONTAINER ================= */
+
+.container{
+ max-width:1250px;
+ margin:auto;
+ padding:1.6rem 2rem;
+}
+
+/* ================= NAV ================= */
+
+nav{
+ position:sticky;
+ top:0;
+ width:100%;
+ background:#fff;
+ border-bottom:3px solid var(--primary);
+ z-index:9999;
+}
+
+.nav-inner{
+ display:flex;
+ justify-content:space-between;
+ align-items:center;
+ height:80px;
+}
+
+/* LOGO */
+nav img{
+ height:68px;
+ width:auto;
+}
+
+/* LINKS */
+nav ul{
+ display:flex;
+ gap:2rem;
+ list-style:none;
+}
+
+nav a{
+ text-decoration:none;
+ font-weight:700;
+ color:#1f2a44;
+}
+
+nav a.active{
+ color:var(--primary);
+ border-bottom:3px solid var(--gold);
+ padding-bottom:6px;
+}
+
+/* BUTTONS */
+
+.btn{
+ padding:.9rem 1.7rem;
+ border-radius:6px;
+ font-weight:700;
+ display:inline-block;
+}
+
+.btn-primary{background:var(--primary);color:white;}
+.btn-gold{background:var(--gold);color:white;}
+
+/* ================= HERO ================= */
+
+.hero-kingz{
+ background:
+ linear-gradient(
+   120deg,
+   rgba(47,127,211,.92),
+   rgba(15,50,110,.95)
+ ),
+ url("https://images.unsplash.com/photo-1542144612-1f7c91a3f8c3?w=1800")
+ center/cover no-repeat;
+
+ padding:7rem 0;
+ color:white;
+}
+
+.hero-content{
+ display:grid;
+ grid-template-columns:1fr 1fr;
+ gap:4rem;
+ align-items:center;
+}
+
+.hero-left h1{
+ font-size:3.2rem;
+ margin-bottom:1rem;
+}
+
+.hero-left p{
+ max-width:520px;
+ margin-bottom:2rem;
+}
+
+.hero-buttons{
+ display:flex;
+ gap:1rem;
+}
+
+/* HERO IMAGE — NO SHADOW */
+
+.hero-right img{
+ width:100%;
+ border-radius:18px;
+ box-shadow:none;
+ background:transparent;
+}
+
+/* ================= TRUST BAR ================= */
+
+.hero-trust{
+ background:var(--navy);
+ color:white;
+ padding:2rem 0;
+}
+
+.trust-grid{
+ display:flex;
+ justify-content:space-around;
+ font-weight:700;
+}
+
+/* ================= CORE SERVICES ================= */
+
+.section-title{
+ font-size:2.2rem;
+ margin-bottom:2.5rem;
+ border-top:4px solid var(--primary);
+ padding-top:1.2rem;
+}
+
+.core-single{
+ display:flex;
+ justify-content:center;
+}
+
+.core-card{
+ position:relative;
+ max-width:920px;
+ width:100%;
+ border-radius:22px;
+ overflow:hidden;
+ box-shadow:0 20px 50px rgba(0,0,0,.15);
+}
+
+.core-card img{
+ width:100%;
+ height:420px;
+ object-fit:cover;
+ display:block;
+}
+
+.core-overlay{
+ position:absolute;
+ inset:0;
+ background:
+ linear-gradient(to top,rgba(10,20,35,.85),rgba(10,20,35,.2));
+ display:flex;
+ flex-direction:column;
+ justify-content:flex-end;
+ padding:2.5rem;
+ color:white;
+}
+
+.core-overlay h3{font-size:2.2rem;}
+.core-overlay p{max-width:520px;opacity:.9;}
+
+/* ================= PROCESS ================= */
+
+.process-band{
+ background:var(--navy);
+ color:white;
+ padding:4rem 0;
+}
+
+.process-grid{
+ display:flex;
+ justify-content:space-around;
+}
+
+/* ================= IMAGE GRID ================= */
+
+.image-grid{
+ display:grid;
+ grid-template-columns:2fr 1fr;
+ gap:2rem;
+}
+
+.image-grid img{
+ width:100%;
+ border-radius:14px;
+}
+
+.small{
+ display:grid;
+ gap:1.5rem;
+}
+
+/* ================= TESTIMONIALS ================= */
+
+.testimonials{
+ position:relative;
+ background:
+ url("https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1800")
+ center/cover no-repeat;
+ padding:7rem 0;
+ color:white;
+ overflow:hidden;
+}
+
+.testimonial-overlay{
+ position:absolute;
+ inset:0;
+ background:linear-gradient(rgba(15,30,55,.92),rgba(15,30,55,.92));
+}
+
+.testimonial-content{
+ position:relative;
+ z-index:2;
+ text-align:center;
+ max-width:900px;
+}
+
+.testimonial-label{
+ font-size:.9rem;
+ text-transform:uppercase;
+ letter-spacing:2px;
+ opacity:.8;
+}
+
+.testimonials h2{
+ font-size:2.4rem;
+ margin:.6rem 0 2rem;
+}
+
+.quote-circle{
+ width:70px;
+ height:70px;
+ background:#49b6ff;
+ border-radius:50%;
+ display:flex;
+ align-items:center;
+ justify-content:center;
+ font-size:28px;
+ margin:0 auto 1.8rem;
+}
+
+.testimonial-text{
+ font-size:1.2rem;
+ max-width:700px;
+ margin:auto;
+}
+
+.testimonial-name{
+ display:block;
+ margin-top:.8rem;
+}
+
+.stars{
+ color:#49b6ff;
+ margin-top:.6rem;
+}
+
+.testimonial-arrows{
+ position:absolute;
+ top:50%;
+ left:0;
+ right:0;
+ display:flex;
+ justify-content:space-between;
+ transform:translateY(-50%);
+ padding:0 2rem;
+}
+
+.testimonial-arrows button{
+ background:#0b7f86;
+ border:none;
+ width:45px;
+ height:45px;
+ border-radius:50%;
+ color:white;
+ cursor:pointer;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+ background:
+   linear-gradient(
+     135deg,
+     var(--primary) 0%,
+     var(--navy) 55%,
+     #0a1c2d 100%
+   );
+ color:white;
+ padding:6rem 4rem;
+ text-align:center;
+}
+
+/* ================= FLOAT ================= */
+
+.whatsapp-float{
+ position:fixed;
+ bottom:95px;
+ right:25px;
+ background:#25d366;
+ color:white;
+ padding:14px 22px;
+ border-radius:50px;
+}
+
+/* ================= NAV SOCIAL ================= */
+
+.nav-social{
+ display:flex;
+ align-items:center;
+ gap:14px;
+}
+
+.btn-small{
+ padding:.55rem 1.25rem;
+ font-size:.9rem;
+}
+
+.nav-icon{
+ font-size:18px;
+ color:#0b7f86;
+}
+
+.nav-icon:hover{
+ color:#d4a017;
+}
+
+/* ================= NEW FEATURES SECTION ================= */
+
+.features-new{
+ background:#f3f6fb;
+ padding:6rem 0;
+}
+
+.features-title{
+ text-align:center;
+ font-size:2.4rem;
+ font-weight:800;
+ max-width:900px;
+ margin:0 auto 4rem;
+ color:#2a2f3a;
+}
+
+.features-cards{
+ display:grid;
+ grid-template-columns:repeat(3,1fr);
+ gap:3rem;
+}
+
+.feature-box{
+ display:flex;
+ gap:1.2rem;
+ align-items:flex-start;
+}
+
+.feature-box h3{
+ font-size:1.2rem;
+ color:#111;
+ margin-bottom:.3rem;
+}
+
+.feature-box span{
+ width:40px;
+ height:3px;
+ background:#1f2a44;
+ display:block;
+ margin:.4rem 0 1rem;
+}
+
+.feature-box p{
+ font-size:.95rem;
+ color:#444;
+ max-width:260px;
+ line-height:1.6;
+}
+
+.feature-icon{
+ width:60px;
+ height:60px;
+ background:#1f2a44;
+ border-radius:50%;
+ display:flex;
+ align-items:center;
+ justify-content:center;
+ color:white;
+ font-size:22px;
+ flex-shrink:0;
+}
+
+.features-cta{
+ text-align:center;
+ margin-top:4rem;
+}
+
+.btn-signup{
+ background:#1f2a44;
+ color:white;
+ padding:1rem 2.4rem;
+ border-radius:40px;
+ font-weight:700;
+ text-decoration:none;
+ display:inline-block;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:900px){
+
+.hero-content{
+ grid-template-columns:1fr;
+ text-align:center;
+}
+
+.hero-buttons{
+ justify-content:center;
+}
+
+.trust-grid,
+.process-grid{
+ flex-direction:column;
+ gap:1.5rem;
+}
+
+.core-card img{
+ height:280px;
+}
+
+.testimonial-arrows{
+ display:none;
+}
+
+.features-title{
+ font-size:2rem;
+}
+
+.features-cards{
+ grid-template-columns:1fr;
+ text-align:center;
+}
+
+.feature-box{
+ flex-direction:column;
+ align-items:center;
+}
+
+.feature-box span{
+ margin-left:auto;
+ margin-right:auto;
+}
+
+}
+
+/* ================= PROMO SPLIT SECTION ================= */
+
+.promo-split{
+ background:#ffffff;
+ padding:6rem 0;
+}
+
+.promo-grid{
+ display:grid;
+ grid-template-columns:1fr 1fr;
+ gap:4rem;
+ align-items:center;
+}
+
+/* IMAGE */
+
+.promo-image img{
+ width:100%;
+ border-radius:18px;
+}
+
+/* TEXT */
+
+.promo-text h2{
+ font-size:1.85rem;
+ font-weight:700;
+ line-height:1.35;
+ margin-bottom:1.6rem;
+ color:#1f2a44;
+}
+
+.promo-text p{
+ font-size:1rem;
+ line-height:1.7;
+ color:#555;
+ margin-bottom:1.4rem;
+ max-width:520px;
+}
+
+/* BUTTON */
+
+.promo-btn{
+ display:inline-block;
+ padding:.9rem 2rem;
+ border:2px solid #1f2a44;
+ border-radius:8px;
+ color:#1f2a44;
+ text-decoration:none;
+ font-weight:700;
+ transition:.2s ease;
+}
+
+.promo-btn:hover{
+ background:#1f2a44;
+ color:white;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.promo-grid{
+ grid-template-columns:1fr;
+ text-align:center;
+}
+
+.promo-text p{
+ margin-left:auto;
+ margin-right:auto;
+}
+
+}
+    /* ================= CEO ================= */
+
+.ceo-section{
+ background:#f7f9fc;
+ padding:6rem 0;
+}
+
+.ceo-grid{
+ display:grid;
+ grid-template-columns:1fr 1fr;
+ gap:4rem;
+ align-items:center;
+}
+
+.ceo-image img{
+ width:100%;
+ border-radius:20px;
+}
+
+.ceo-text h2{font-size:2.4rem;}
+.ceo-text h3{margin-top:.5rem;}
+.ceo-title{color:var(--primary); font-weight:700;}
+
+/* ================= MISSION ================= */
+
+.mission-vision{
+ background:white;
+ padding:6rem 0;
+}
+
+.mission-grid{
+ display:grid;
+ grid-template-columns:repeat(2,1fr);
+ gap:3rem;
+}
+
+.mission-card{
+ background:#f2f5fb;
+ padding:3rem;
+ border-radius:16px;
+ text-align:center;
+}
+
+.mission-card i{
+ font-size:34px;
+ color:var(--primary);
+}
+
+/* ================= VALUES ================= */
+
+.core-values{
+ background:#fff;
+ padding:6rem 0;
+}
+
+.values-title{text-align:center;margin-bottom:4rem;}
+
+.values-grid{
+ display:grid;
+ grid-template-columns:repeat(3,1fr);
+ gap:2.5rem;
+}
+
+.value-card img{
+ width:100%;
+ border-radius:14px;
+}
+
+.value-card h3{margin:1rem 0;}
+
+/* ================= MEDIA ================= */
+
+.media-section{
+  background:
+    linear-gradient(
+      135deg,
+      var(--navy) 0%,
+      #12344f 45%,
+      var(--primary) 100%
+    );
+  color:white;
+  padding:8rem 0;
+}
+
+.media-grid{
+ display:grid;
+ grid-template-columns:2fr 1fr 1fr;
+ gap:2rem;
+}
+
+.media-grid video,
+.media-grid img{
+ width:100%;
+ border-radius:14px;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.ceo-grid,
+.mission-grid,
+.values-grid,
+.media-grid{
+ grid-template-columns:1fr;
+}
+
+}
+
+/* ================= PREMIUM HOME OVERRIDES ================= */
+
+.section-kicker{
+ text-transform:uppercase;
+ letter-spacing:2px;
+ font-weight:800;
+ color:var(--gold);
+ margin-bottom:.6rem;
+ display:block;
+}
+
+/* CEO polish */
+
+.premium-ceo{
+ background:linear-gradient(#f7f9fc,#ffffff);
+}
+
+.ceo-text h2{
+ font-size:3rem;
+}
+
+.ceo-text h3{
+ font-size:1.4rem;
+ margin-top:.6rem;
+}
+
+/* Mission polish */
+
+.premium-mv .mission-card{
+ background:white;
+ border:1px solid rgba(0,0,0,.05);
+ box-shadow:0 15px 40px rgba(0,0,0,.06);
+}
+
+/* Values polish */
+
+.premium-values .value-card{
+ background:#f8fbff;
+ padding:2.8rem;
+ border-radius:20px;
+ box-shadow:0 12px 32px rgba(0,0,0,.05);
+ transition:.3s ease;
+}
+
+.premium-values .value-card:hover{
+ transform:translateY(-8px);
+}
+
+.premium-values .value-card h3{
+ color:var(--navy);
+ font-size:1.35rem;
+}
+
+/* Media cinematic */
+
+.cinematic-media{
+ background:linear-gradient(135deg,#0b1d3a,#08152c);
+}
+
+.media-title{
+ text-align:center;
+ font-size:2.6rem;
+ margin-bottom:3.5rem;
+}
+
+.cinematic-media video{
+ box-shadow:0 30px 80px rgba(0,0,0,.45);
+}
+
+/* responsive */
+
+@media(max-width:900px){
+
+.ceo-text h2{
+ font-size:2.2rem;
+}
+
+.media-title{
+ font-size:2rem;
+}
+
+}
+/* ================= CEO ================= */
+
+.ceo-section{
+ background:#f8fbff;
+ padding:7rem 0;
+}
+
+.ceo-grid{
+ display:grid;
+ grid-template-columns:1fr 1fr;
+ gap:5rem;
+ align-items:center;
+}
+
+.ceo-image img{
+ width:100%;
+ border-radius:22px;
+ box-shadow:0 30px 60px rgba(0,0,0,.15);
+}
+
+.leadership-tag{
+ color:var(--gold);
+ text-transform:uppercase;
+ font-weight:800;
+ letter-spacing:2px;
+ font-size:.75rem;
+}
+
+.ceo-text h2{
+ font-size:2.8rem;
+ margin:.5rem 0;
+}
+
+.ceo-btn{
+ display:inline-block;
+ margin-top:1.5rem;
+ border:2px solid var(--navy);
+ padding:.9rem 2.2rem;
+ border-radius:40px;
+ font-weight:700;
+ text-decoration:none;
+ color:var(--navy);
+}
+
+.ceo-btn:hover{
+ background:var(--navy);
+ color:white;
+}
+
+/* ================= MISSION ================= */
+
+.mission-vision{
+ background:linear-gradient(135deg,#f3f8ff,#fff);
+ padding:7rem 0;
+}
+
+.mission-card{
+ background:white;
+ border-radius:20px;
+ padding:3rem;
+ box-shadow:0 18px 40px rgba(0,0,0,.06);
+ transition:.3s;
+}
+
+.mission-card:hover{
+ transform:translateY(-10px);
+}
+
+/* ================= VALUES ================= */
+
+.core-values{
+ background:#f4f8fc;
+ padding:7rem 0;
+}
+
+.value-card{
+ background:white;
+ padding:2.5rem;
+ border-radius:20px;
+ box-shadow:0 15px 35px rgba(0,0,0,.08);
+ transition:.3s;
+}
+
+.value-card:hover{
+ transform:translateY(-12px);
+}
+
+/* ================= MEDIA ================= */
+
+.media-section{
+  background:
+    linear-gradient(
+      135deg,
+      rgba(11,127,134,.95),
+      rgba(31,42,68,.95)
+    );
+  color:white;
+  padding:8rem 0;
+}
+
+.media-title{text-align:center;font-size:3rem;}
+.media-sub{text-align:center;max-width:720px;margin:1rem auto 4rem;}
+
+.media-grid{
+ display:grid;
+ grid-template-columns:2fr 1fr;
+ gap:3rem;
+ align-items:center;
+}
+
+.media-main video,
+.media-side video{
+ width:100%;
+ border-radius:22px;
+ box-shadow:0 25px 60px rgba(0,0,0,.5);
+}
+
+.media-caption{
+ margin-top:1.5rem;
+ background:rgba(255,255,255,.08);
+ padding:2rem;
+ border-radius:18px;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+.ceo-grid,
+.mission-grid,
+.values-grid,
+.media-grid{
+ grid-template-columns:1fr;
+}
+}
+
+/* ================= STRONG BRAND BACKGROUNDS ================= */
+/* Heavy professional color fills – removes white emptiness */
+
+/* Global canvas */
+body{
+  background:
+    linear-gradient(
+      180deg,
+      #e6f4f6 0%,
+      #ffffff 35%
+    );
+}
+
+/* CEO section */
+.ceo-section{
+  background:
+    linear-gradient(
+      180deg,
+      rgba(11,127,134,.28) 0%,
+      rgba(31,42,68,.15) 60%,
+      #ffffff 100%
+    );
+}
+
+/* Mission / Vision */
+.mission-vision{
+  background:
+    linear-gradient(
+      135deg,
+      rgba(11,127,134,.30),
+      rgba(31,42,68,.22)
+    );
+}
+
+/* Core Values */
+.core-values{
+  background:
+    linear-gradient(
+      180deg,
+      rgba(31,42,68,.25),
+      rgba(11,127,134,.30)
+    );
+}
+
+/* Thick section separators */
+.ceo-section::before,
+.mission-vision::before,
+.core-values::before{
+  content:"";
+  display:block;
+  height:8px;
+  width:100%;
+  background:
+    linear-gradient(
+      to right,
+      var(--primary),
+      var(--gold),
+      var(--navy)
+    );
+  margin-bottom:6rem;
+}
+
+/* Title accent stronger */
+.values-title{
+  color:var(--navy);
+  position:relative;
+}
+
+.values-title::after{
+  content:"";
+  width:110px;
+  height:6px;
+  background:var(--primary);
+  display:block;
+  margin:1.5rem auto 0;
+  border-radius:8px;
+}
+
+/* Card contrast boost */
+.value-card{
+  background:white;
+  box-shadow:0 32px 75px rgba(31,42,68,.18);
+}
+
+.mission-card{
+  box-shadow:0 30px 70px rgba(31,42,68,.16);
+}
+
+/* Reduce visual emptiness */
+.ceo-section,
+.mission-vision,
+.core-values{
+  padding-top:11rem;
+  padding-bottom:11rem;
+}
+
+/* ================= VALUE ICONS ================= */
+
+.value-icon{
+  width:70px;
+  height:70px;
+  margin-bottom:1.2rem;
+  background:linear-gradient(
+    135deg,
+    var(--primary),
+    var(--navy)
+  );
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 18px 40px rgba(11,127,134,.35);
+}
+
+.value-icon i{
+  font-size:28px;
+  color:white;
+}
+
+/* Center inside cards */
+.value-card{
+  text-align:center;
+}
+
+.value-card h3{
+  margin-top:.8rem;
+}
+
+
+/* ============================================================
+   SERVICES + ABOUT — PREMIUM BRAND SYSTEM
+   ============================================================ */
+
+/* ---------- PAGE HERO ---------- */
+
+.services-hero,
+.about-hero{
+  background:
+    linear-gradient(
+      rgba(12,45,85,.65),
+      rgba(8,30,60,.65)
+    ),
+    url("../images/ChatGPT Image Jan 27, 2026, 11_11_52 PM.png")
+    center/cover no-repeat;
+
+  color:white;
+  padding:10rem 0 9rem;
+  text-align:center;
+}
+
+.services-hero h1,
+.about-hero h1{
+  font-size:3.4rem;
+  margin-bottom:1rem;
+}
+
+.services-hero p,
+.about-hero p{
+  max-width:760px;
+  margin:0 auto;
+  opacity:.95;
+  font-size:1.05rem;
+}
+
+/* ---------- SECTION BASE ---------- */
+
+.services-section,
+.about-section{
+  background:
+    linear-gradient(
+      180deg,
+      #e6f4f6 0%,
+      #ffffff 35%
+    );
+  padding:9rem 0;
+}
+
+/* ---------- DIVIDER BAR ---------- */
+
+.services-section::before,
+.about-section::before{
+  content:"";
+  display:block;
+  height:10px;
+  width:100%;
+  background:
+    linear-gradient(
+      to right,
+      var(--primary),
+      var(--gold),
+      var(--navy)
+    );
+  margin-bottom:6rem;
+}
+
+/* ---------- CARDS GRID ---------- */
+
+.services-grid,
+.about-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:3rem;
+}
+
+/* ---------- CARDS ---------- */
+
+.service-card,
+.about-card{
+  background:white;
+  padding:3.2rem;
+  border-radius:26px;
+  box-shadow:0 30px 80px rgba(31,42,68,.16);
+  transition:.35s ease;
+  position:relative;
+}
+
+.service-card:hover,
+.about-card:hover{
+  transform:translateY(-14px);
+}
+
+/* ---------- ICONS ---------- */
+
+.service-icon,
+.about-icon{
+  width:76px;
+  height:76px;
+  background:
+    linear-gradient(
+      135deg,
+      var(--primary),
+      var(--navy)
+    );
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-bottom:1.6rem;
+  box-shadow:0 22px 45px rgba(11,127,134,.4);
+}
+
+.service-icon i,
+.about-icon i{
+  font-size:30px;
+  color:white;
+}
+
+/* ---------- HEADINGS ---------- */
+
+.service-card h3,
+.about-card h3{
+  font-size:1.5rem;
+  margin-bottom:.7rem;
+  color:var(--navy);
+}
+
+/* ---------- TEXT ---------- */
+
+.service-card p,
+.about-card p{
+  color:#555;
+  line-height:1.75;
+}
+
+/* ---------- ABOUT LEADERSHIP ---------- */
+
+.about-leadership{
+  background:
+    linear-gradient(
+      135deg,
+      rgba(11,127,134,.28),
+      rgba(31,42,68,.22)
+    );
+  padding:10rem 0;
+}
+
+.about-leadership .leader-card{
+  background:white;
+  border-radius:28px;
+  padding:3.5rem;
+  box-shadow:0 40px 95px rgba(0,0,0,.18);
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+@media(max-width:900px){
+
+.services-grid,
+.about-grid{
+  grid-template-columns:1fr;
+}
+
+.services-hero h1,
+.about-hero h1{
+  font-size:2.4rem;
+}
+
+.services-section,
+.about-section{
+  padding:7rem 0;
+}
+
+}
+
+/* ============================================================
+   ABOUT + SERVICES — ENTERPRISE BRAND SYSTEM
+============================================================ */
+
+/* ---------- PAGE HERO ---------- */
+
+
+
+.services-hero h1,
+.about-hero h1{
+  font-size:3.4rem;
+  margin-bottom:1.2rem;
+}
+
+.services-hero p,
+.about-hero p{
+  max-width:780px;
+  margin:0 auto;
+  opacity:.95;
+  font-size:1.1rem;
+}
+
+/* ---------- SECTION BASE ---------- */
+
+.services-section,
+.about-section{
+  background:
+    linear-gradient(
+      180deg,
+      rgba(11,127,134,.18),
+      #ffffff 38%
+    );
+  padding:10rem 0;
+}
+
+/* ---------- DIVIDER BAR ---------- */
+
+.services-section::before,
+.about-section::before{
+  content:"";
+  display:block;
+  height:10px;
+  width:100%;
+  background:
+    linear-gradient(
+      to right,
+      var(--primary),
+      var(--gold),
+      var(--navy)
+    );
+  margin-bottom:6rem;
+}
+
+/* ---------- GRIDS ---------- */
+
+.services-grid,
+.about-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:3.5rem;
+}
+
+/* ---------- CARDS ---------- */
+
+.service-card,
+.about-card{
+  background:white;
+  padding:3.4rem;
+  border-radius:28px;
+  box-shadow:0 32px 85px rgba(31,42,68,.18);
+  transition:.35s ease;
+  position:relative;
+}
+
+.service-card:hover,
+.about-card:hover{
+  transform:translateY(-14px);
+}
+
+/* ---------- ICON BADGES ---------- */
+
+.service-icon,
+.about-icon{
+  width:78px;
+  height:78px;
+  background:
+    linear-gradient(
+      135deg,
+      var(--primary),
+      var(--navy)
+    );
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-bottom:1.8rem;
+  box-shadow:0 22px 45px rgba(11,127,134,.45);
+}
+
+.service-icon i,
+.about-icon i{
+  font-size:30px;
+  color:white;
+}
+
+/* ---------- HEADINGS ---------- */
+
+.service-card h3,
+.about-card h3{
+  font-size:1.55rem;
+  margin-bottom:.8rem;
+  color:var(--navy);
+}
+
+/* ---------- TEXT ---------- */
+
+.service-card p,
+.about-card p{
+  color:#555;
+  line-height:1.75;
+}
+
+/* ---------- ABOUT LEADERSHIP ---------- */
+
+.about-leadership{
+  background:
+    linear-gradient(
+      135deg,
+      rgba(11,127,134,.32),
+      rgba(31,42,68,.24)
+    );
+  padding:11rem 0;
+}
+
+.about-leadership .leader-card{
+  background:white;
+  border-radius:30px;
+  padding:4rem;
+  box-shadow:0 45px 110px rgba(0,0,0,.2);
+  max-width:980px;
+  margin:auto;
+}
+
+.about-leadership h2{
+  font-size:2.4rem;
+  margin-bottom:.6rem;
+}
+
+.about-leadership h3{
+  color:var(--primary);
+  margin-bottom:1.4rem;
+}
+
+/* ---------- LONG FORM TEXT ---------- */
+
+.about-section p{
+  font-size:1.05rem;
+  line-height:1.9;
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+@media(max-width:900px){
+
+.services-grid,
+.about-grid{
+  grid-template-columns:1fr;
+}
+
+.services-hero h1,
+.about-hero h1{
+  font-size:2.4rem;
+}
+
+
+.services-section,
+.about-section{
+  padding:7.5rem 0;
+}
+
+.about-leadership{
+  padding:8rem 0;
+}
+
+.about-leadership .leader-card{
+  padding:2.8rem;
+}
+
+}
+/* ================= SERVICES HERO — FULL BLEED IMAGE ================= */
+
+.services-hero{
+  position:relative;
+  min-height:70vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:white;
+  overflow:hidden;
+}
+
+/* FULL WIDTH IMAGE */
+
+.services-bg-img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+  z-index:1;
+}
+
+/* DARK GRADIENT OVERLAY */
+
+.services-overlay{
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(
+      rgba(12,45,85,.55),
+      rgba(8,30,60,.55)
+    );
+  z-index:2;
+}
+
+/* TEXT CONTENT */
+
+.services-hero-content{
+  position:relative;
+  z-index:3;
+  max-width:900px;
+  padding:4rem 2rem;
+}
+
+.services-hero h1{
+  font-size:3.4rem;
+  margin-bottom:1rem;
+}
+
+.services-hero p{
+  font-size:1.1rem;
+  opacity:.95;
+}
+
+/* ================= REMOVE RAINBOW DIVIDERS ================= */
+
+.services-section::before,
+.about-section::before,
+.ceo-section::before,
+.mission-vision::before,
+.core-values::before{
+  background:#ffffff !important;
+  height:8px;
+}
+
+/* ================= FORCE CLEAN WHITE SECTIONS ================= */
+
+/* Remove global canvas gradient */
+body{
+  background:#ffffff !important;
+}
+
+/* Main content sections */
+.services-section,
+.about-section,
+.mission-vision,
+.core-values,
+.features-new,
+.promo-split,
+.ceo-section,
+.media-section{
+  background:#ffffff !important;
+}
+/* ================= SERVICES IMAGE FIX ================= */
+
+/* Image container replaces icon badge */
+.service-icon{
+  width:100%;
+  height:200px;
+
+  margin-bottom:1.8rem;
+
+  border-radius:18px;
+  overflow:hidden;
+
+  background:none !important;
+  box-shadow:none !important;
+
+  display:block;
+}
+
+/* Landscape image */
+.service-icon img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+  display:block;
+}
+
+/* Remove icon circles completely */
+.service-icon i{
+  display:none !important;
+}
+
+/* Remove any glow pseudo elements */
+.service-icon::before,
+.service-icon::after{
+  display:none !important;
+}
+/* ================= SERVICES COLOR RESTORE ================= */
+
+/* Page background */
+body{
+  background:
+    linear-gradient(
+      180deg,
+      #e6f4f6 0%,
+      #ffffff 40%
+    ) !important;
+}
+
+/* Services section background */
+.services-section{
+  background:
+    linear-gradient(
+      135deg,
+      rgba(11,127,134,.18),
+      rgba(31,42,68,.12),
+      #ffffff 75%
+    ) !important;
+}
+
+/* Soft vertical glow columns behind cards */
+.services-section::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(circle at 20% 40%, rgba(11,127,134,.08), transparent 45%),
+    radial-gradient(circle at 80% 50%, rgba(31,42,68,.08), transparent 45%);
+  pointer-events:none;
+}
+
+/* Card polish stays white */
+.service-card{
+  background:white;
+  box-shadow:0 35px 85px rgba(31,42,68,.18);
+}
+
+/* Slight tint under image */
+.service-icon{
+  background:#f3f9fa;
+}
+/* ================= SERVICES HERO TEXT ================= */
+
+.services-title{
+  font-family:'Poppins',sans-serif;
+  font-size:3.2rem;
+  font-weight:800;
+  margin-bottom:.6rem;
+  letter-spacing:.5px;
+}
+
+.services-subtitle{
+  font-family:'Poppins',sans-serif;
+  font-size:1.05rem;
+  opacity:.9;
+  max-width:620px;
+  margin:auto;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+  .services-title{
+    font-size:2.2rem;
+  }
+
+  .services-hero{
+    min-height:30vh;
+  }
+}
+
+/* ============================================================
+   SERVICES PAGE — GAP REDUCTION FIX
+============================================================ */
+
+/* Reduce hero height */
+.services-hero{
+  min-height:42vh !important;
+}
+
+/* Tighten hero text padding */
+.services-hero-content{
+  padding:2.5rem 2rem !important;
+}
+
+/* Pull services section upward */
+.services-section{
+  padding-top:4rem !important;
+  padding-bottom:7rem !important;
+}
+
+/* Remove divider spacing */
+.services-section::before{
+  margin-bottom:2.5rem !important;
+}
+
+/* Mobile tuning */
+@media(max-width:900px){
+  .services-hero{
+    min-height:28vh !important;
+  }
+
+  .services-section{
+    padding-top:3rem !important;
+  }
+}
+/* ================= SERVICES SECTION HEADER ================= */
+
+.services-header{
+  text-align:center;
+  max-width:760px;
+  margin:0 auto 4.5rem;
+}
+
+.services-heading{
+  font-family:'Poppins',sans-serif;
+  font-size:2.9rem;
+  font-weight:800;
+  color:var(--navy);
+  margin-bottom:.8rem;
+  letter-spacing:.4px;
+}
+
+.services-intro{
+  font-family:'Poppins',sans-serif;
+  font-size:1.05rem;
+  color:#555;
+  line-height:1.7;
+}
+
+/* Mobile */
+@media(max-width:900px){
+  .services-heading{
+    font-size:2.1rem;
+  }
+
+  .services-header{
+    margin-bottom:3rem;
+  }
+}
+/* ============================================================
+   SERVICES CTA FOOTER BAND
+============================================================ */
+
+.services-cta{
+  background:
+    linear-gradient(
+      135deg,
+      var(--navy),
+      var(--primary)
+    );
+  color:white;
+  padding:7rem 0;
+  text-align:center;
+}
+
+.services-cta h2{
+  font-family:'Poppins',sans-serif;
+  font-size:2.8rem;
+  font-weight:800;
+  margin-bottom:.8rem;
+}
+
+.services-cta p{
+  max-width:680px;
+  margin:0 auto 2.5rem;
+  opacity:.9;
+  font-size:1.05rem;
+}
+
+/* FORM */
+
+.cta-form{
+  display:flex;
+  justify-content:center;
+  gap:1rem;
+  margin-bottom:4rem;
+  flex-wrap:wrap;
+}
+
+.cta-form input{
+  padding:1rem 1.6rem;
+  border-radius:50px;
+  border:none;
+  min-width:280px;
+  outline:none;
+  font-size:1rem;
+}
+
+.cta-form button{
+  background:var(--gold);
+  color:white;
+  border:none;
+  padding:1rem 2.2rem;
+  border-radius:50px;
+  font-weight:700;
+  cursor:pointer;
+  transition:.25s ease;
+}
+
+.cta-form button:hover{
+  transform:translateY(-2px);
+  box-shadow:0 12px 30px rgba(0,0,0,.25);
+}
+
+/* CONTACT BLOCK */
+
+.cta-contact h3{
+  font-size:1.6rem;
+  margin-bottom:1rem;
+}
+
+.cta-contact p{
+  margin-bottom:1rem;
+  font-size:.95rem;
+}
+
+.copyright{
+  display:block;
+  margin-top:2rem;
+  opacity:.75;
+  font-size:.9rem;
+}
+
+/* WHATSAPP BUTTON */
+
+.cta-whatsapp{
+  display:inline-block;
+  margin-top:2.5rem;
+  background:#25d366;
+  color:white;
+  padding:.9rem 2.4rem;
+  border-radius:40px;
+  font-weight:700;
+  text-decoration:none;
+  box-shadow:0 18px 40px rgba(0,0,0,.25);
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+  .services-cta h2{
+    font-size:2.1rem;
+  }
+
+  .cta-form{
+    flex-direction:column;
+  }
+
+}
+/* ================= FOOTER BOTTOM GAP FIX ================= */
+
+/* Remove global bottom padding */
+body{
+  padding-bottom:0 !important;
+}
+
+/* Kill margin after footer */
+footer,
+.services-cta{
+  margin-bottom:0 !important;
+}
+
+/* Prevent phantom spacing */
+footer::after{
+  display:none !important;
+}
+
+/* Ensure last section sits flush */
+.services-cta:last-child{
+  padding-bottom:4rem;
+}
+/* ================= CTA FOOTER SPACE FIX ================= */
+
+.services-cta{
+  padding-bottom:4rem !important;
+}
+
+.services-cta .cta-whatsapp{
+  margin-bottom:0 !important;
+}
+
+/* Remove extra body scroll after footer */
+body{
+  padding-bottom:0 !important;
+}
+
+/* Make sure nothing adds space after CTA */
+.services-cta + *{
+  display:none !important;
+}
+
+/* ================= REDUCE INDEX PAGE WHITE SPACE ================= */
+
+.ceo-section{
+  padding-top:4rem !important;
+  padding-bottom:4rem !important;
+}
+
+.mission-vision{
+  padding-top:4rem !important;
+  padding-bottom:4rem !important;
+}
+
+.core-values{
+  padding-top:4rem !important;
+  padding-bottom:4rem !important;
+}
+
+.media-section{
+  padding-top:4rem !important;
+  padding-bottom:4rem !important;
+}
+
+.hero-trust{
+  margin-bottom:3rem !important;
+}
+
+/* Reduce big heading gaps */
+
+.values-title,
+.media-title{
+  margin-bottom:2rem !important;
+}
+
+.ceo-text{
+  margin-top:0 !important;
+}
+/* ============================================================
+   INDEX PAGE — FILL WHITE GAPS WITH BRAND COLOR
+============================================================ */
+
+/* Background wash behind sections */
+body{
+  background:
+    linear-gradient(
+      180deg,
+      rgba(11,127,134,.12) 0%,
+      rgba(31,42,68,.08) 40%,
+      #ffffff 75%
+    ) !important;
+}
+
+/* CEO → Mission → Values flow */
+
+.ceo-section,
+.mission-vision,
+.core-values,
+.media-section{
+  background:
+    linear-gradient(
+      135deg,
+      rgba(11,127,134,.18),
+      rgba(31,42,68,.12)
+    ) !important;
+}
+
+/* Keep cards white for contrast */
+
+.mission-card,
+.value-card,
+.media-caption{
+  background:white !important;
+}
+
+/* Reduce dead vertical space */
+
+.ceo-section{
+  padding-top:5rem !important;
+  padding-bottom:5rem !important;
+}
+
+.mission-vision{
+  padding-top:5rem !important;
+  padding-bottom:5rem !important;
+}
+
+.core-values{
+  padding-top:5rem !important;
+  padding-bottom:5rem !important;
+}
+
+.media-section{
+  padding-top:6rem !important;
+  padding-bottom:6rem !important;
+}
+
+/* Remove giant empty margins */
+
+.ceo-section::before,
+.mission-vision::before,
+.core-values::before{
+  margin-bottom:2.5rem !important;
+}
+
+/* Title spacing control */
+
+.values-title,
+.media-title{
+  margin-bottom:2rem !important;
+}
+
+/* ============================================================
+   INDEX PAGE — SIDE DARKENING & TEXT READABILITY FIX
+============================================================ */
+
+/* Make side background deeper so white text pops */
+
+.media-section{
+  background:
+    radial-gradient(circle at center,
+      rgba(11,127,134,.85) 0%,
+      rgba(31,42,68,.92) 70%
+    ) !important;
+}
+
+/* Strengthen outer canvas behind sections */
+
+.ceo-section,
+.mission-vision,
+.core-values{
+  background:
+    radial-gradient(circle at center,
+      rgba(11,127,134,.55),
+      rgba(31,42,68,.75)
+    ) !important;
+}
+
+/* Ensure text is crisp */
+
+.media-title,
+.media-sub,
+.mission-vision h2,
+.mission-vision p{
+  color:white !important;
+}
+
+/* White cards stay readable */
+
+.mission-card,
+.value-card{
+  background:#ffffff !important;
+}
+
+/* Add subtle vignette on sides */
+
+.media-section::before,
+.ceo-section::before,
+.mission-vision::before,
+.core-values::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(
+      to right,
+      rgba(31,42,68,.55),
+      transparent 20%,
+      transparent 80%,
+      rgba(31,42,68,.55)
+    );
+  pointer-events:none;
+}
+/* ============================================================
+   INDEX — MISSION/VISION CONTAINER COLOR FIX
+============================================================ */
+
+/* Make outer container blend into background */
+.mission-vision .container{
+  background:transparent !important;
+}
+
+/* Mission & Vision cards stay white */
+.mission-card{
+  background:#ffffff !important;
+}
+
+/* Mission & Vision headings + text BLACK */
+.mission-card h3,
+.mission-card p{
+  color:#111 !important;
+}
+
+/* Section header white on gradient */
+.mission-vision h2,
+.mission-vision .section-title,
+.mission-vision .mv-header{
+  color:white !important;
+}
+
+/* Slight inner shadow separation */
+.mission-card{
+  box-shadow:0 25px 60px rgba(0,0,0,.18) !important;
+}
+/* ============================================================
+   INDEX — REMOVE WHITE MEDIA BOX (BOTTOM RIGHT)
+============================================================ */
+
+/* Kill white card look */
+.media-caption{
+  background:transparent !important;
+  box-shadow:none !important;
+  color:white !important;
+}
+
+/* Ensure text stays readable */
+.media-caption h4,
+.media-caption p{
+  color:white !important;
+}
+
+/* If any wrapper is forcing white */
+.media-side > div{
+  background:transparent !important;
+}
+
+/* Smooth glass look instead (optional but premium) */
+.media-caption{
+  backdrop-filter:blur(6px);
+  padding:2rem;
+  border-radius:18px;
+}
+/* ============================================================
+   ABOUT PAGE — PREMIUM DESIGN
+============================================================ */
+
+.about-license{
+  background:linear-gradient(135deg,#0b7f86,#1f2a44);
+  color:white;
+  padding:6rem 0;
+  text-align:center;
+}
+
+.license-list{
+  max-width:900px;
+  margin:3rem auto 0;
+  list-style:none;
+  display:grid;
+  gap:1rem;
+  font-size:1.05rem;
+}
+
+.about-countries{
+  background:#f5f9fd;
+  padding:7rem 0;
+  text-align:center;
+}
+
+.about-countries h2{
+  font-size:2.6rem;
+  margin-bottom:3rem;
+}
+
+.countries-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+  gap:2.5rem;
+}
+
+.countries-grid div{
+  background:white;
+  padding:1.6rem;
+  border-radius:16px;
+  box-shadow:0 18px 40px rgba(0,0,0,.1);
+  font-weight:700;
+}
+
+.countries-grid img{
+  width:42px;
+  margin-bottom:.6rem;
+}
+
+.about-contact{
+  background:linear-gradient(135deg,#1f2a44,#0b7f86);
+  color:white;
+  padding:8rem 0;
+  text-align:center;
+}
+
+.about-contact h2{
+  font-size:2.6rem;
+  margin-bottom:2rem;
+}
+
+.about-contact p{
+  font-size:1.05rem;
+  margin-bottom:1rem;
+}
+.countries-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+  gap:2rem;
+}
+
+.countries-grid .country{
+  background:white;
+  padding:1.6rem;
+  border-radius:14px;
+  box-shadow:0 14px 35px rgba(0,0,0,.08);
+  text-align:center;
+}
+
+.countries-grid .country img{
+  width:48px;
+  height:auto;
+  margin-bottom:.5rem;
+}
+
+.countries-grid .country span{
+  display:block;
+  font-size:1rem;
+  font-weight:700;
+  color:#1f2a44;
+}
+/* ===== Mission & Vision Image Fix ===== */
+
+.mission-card .icon {
+  width: 100%;
+  height: 180px;              /* controls vertical size */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  overflow: hidden;
+  border-radius: 14px;
+}
+
+.mission-card .icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;         /* landscape crop */
+}
+/* ===== Core Values Image Icons ===== */
+
+.value-icon {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 20px;
+  background: linear-gradient(145deg, #0c7c84, #053c41);
+}
+
+.value-icon img {
+  width: 55%;
+  height: 55%;
+  object-fit: contain;
+}
+/* ===== Core Values Banner Images ===== */
+
+.value-image {
+  width: 100%;
+  height: 180px;   /* same scale as card images */
+  overflow: hidden;
+  border-radius: 18px 18px 0 0;
+}
+
+.value-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* remove old circle styling if still applied */
+.value-icon {
+  display: none;
+}
+/* ===== PARTNERS GRID ===== */
+
+.about-partners {
+  padding: 100px 20px;
+  background: #f6f9f9;
+  text-align: center;
+}
+
+.partners-subtitle {
+  max-width: 720px;
+  margin: 15px auto 50px;
+  font-size: 1.05rem;
+  opacity: 0.85;
+}
+
+.partners-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 35px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.partner-card {
+  background: white;
+  border-radius: 18px;
+  padding: 28px 22px;
+  box-shadow: 0 12px 30px rgba(0,0,0,.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.partner-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 45px rgba(0,0,0,.15);
+}
+
+.partner-card img {
+  max-height: 70px;
+  width: auto;
+  object-fit: contain;
+}
+
+.partner-card span {
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: .4px;
+}
+
+@media(max-width:768px){
+  .about-partners{
+    padding:70px 15px;
+  }
+}
+/* ===== CEO MODAL ===== */
+
+.ceo-readmore-btn {
+  margin-top: 22px;
+  background: #0c7c84;
+  color: white;
+  border: none;
+  padding: 12px 26px;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background .25s ease;
+}
+
+.ceo-readmore-btn:hover { 
+  background:#075b60;
+}
+
+.ceo-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.85);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 25px;
+}
+
+.ceo-modal-box {
+  background: #000;
+  color: white;
+  max-width: 900px;
+  width: 100%;
+  max-height: 85vh;
+  overflow-y: auto;
+  padding: 45px 50px;
+  border-radius: 18px;
+  position: relative;
+  animation: fadeScale .35s ease;
+}
+
+.ceo-modal-box h2 {
+  margin-bottom: 5px;
+}
+
+.ceo-modal-box h4 {
+  opacity: .8;
+  margin-bottom: 30px;
+}
+
+.ceo-modal-content p {
+  margin-bottom: 18px;
+  line-height: 1.7;
+  font-size: 1.02rem;
+}
+
+.ceo-close-btn {
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+@keyframes fadeScale {
+  from {
+    opacity:0;
+    transform: scale(.9);
+  }
+  to {
+    opacity:1;
+    transform: scale(1);
+  }
+}
+
+@media(max-width:768px){
+  .ceo-modal-box{
+    padding:30px 25px;
+  }
+}
+.ceo-modal-overlay{
+  z-index: 999999 !important;
+}
+/* ============================================================
+   CEO FIRST SECTION — FORCE PURE WHITE BACKGROUND
+============================================================ */
+
+/* CEO section ONLY stays white */
+.ceo-section{
+  background:#ffffff !important;
+}
+
+/* Remove gradient overlays affecting CEO */
+.ceo-section::before{
+  background:#ffffff !important;
+  content:none !important;
+}
+
+/* Keep text dark */
+.ceo-section h2,
+.ceo-section h3,
+.ceo-section p{
+  color:#1f2a44 !important;
+}
+
+/* Kill vignette layers from global index rules */
+.ceo-section::after{
+  display:none !important;
+}
+
+/* Ensure container doesn't inherit tint */
+.ceo-section .container{
+  background:transparent !important;
+}
+/* ================= FLYER SHOWCASE ================= */
+
+.flyer-showcase{
+  background:#f4f7ff;
+  padding:8rem 0;
+  text-align:center;
+}
+
+.flyer-title{
+  font-family:'Poppins',sans-serif;
+  font-size:2.8rem;
+  font-weight:800;
+  color:#0d2b57;
+  margin-bottom:.6rem;
+}
+
+.flyer-sub{
+  max-width:720px;
+  margin:0 auto 4rem;
+  color:#555;
+}
+
+.flyer-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:3rem;
+}
+
+.flyer-grid img{
+  width:100%;
+  border-radius:22px;
+  box-shadow:0 25px 60px rgba(0,0,0,.18);
+}
+
+/* mobile */
+@media(max-width:900px){
+  .flyer-grid{
+    grid-template-columns:1fr;
+  }
+}
+body{
+ font-family:'Poppins',sans-serif;
+}
+/* ================= CEO MODAL ================= */
+
+.ceo-modal{
+ position:fixed;
+ inset:0;
+ background:rgba(0,0,0,.65);
+ display:none;
+ justify-content:center;
+ align-items:center;
+ z-index:9000;
+}
+
+.ceo-modal-box{
+ background:white;
+ padding:3.5rem;
+ border-radius:20px;
+ max-width:680px;
+}
+
+.ceo-close{
+ position:absolute;
+ top:20px;
+ right:25px;
+ font-size:30px;
+ cursor:pointer;
+}
+/* ================= FORCE BLUE BRAND ================= */
+
+.media-section,
+.services-hero,
+.about-hero,
+.faq-hero,
+.services-cta,
+.process-band{
+ background:
+ linear-gradient(
+   135deg,
+   rgba(47,127,211,.95),
+   rgba(11,31,63,.95)
+ ) !important;
+}
+
+/* Buttons */
+
+.btn-primary,
+.whatsapp-float,
+.cta-whatsapp{
+ background:#2f7fd3 !important;
+}
+
+/* Icons */
+
+.nav-icon{
+ color:#2f7fd3 !important;
+}
+/* ================= FOUNDER MODAL ================= */
+
+.ceo-modal{
+ position:fixed;
+ inset:0;
+ background:rgba(0,0,0,.6);
+ display:none;
+ justify-content:center;
+ align-items:center;
+ z-index:99999;
+}
+
+.ceo-modal-box{
+ background:white;
+ padding:3.5rem;
+ border-radius:20px;
+ max-width:650px;
+ width:90%;
+ position:relative;
+}
+
+.ceo-close{
+ position:absolute;
+ top:16px;
+ right:22px;
+ font-size:30px;
+ cursor:pointer;
+}
+/* =====================================================
+   FINAL LOGO-BLUE OVERRIDE — REMOVE ALL TEAL
+===================================================== */
+
+:root{
+  --brand-blue:#2f7fd3;
+  --brand-blue-dark:#0b2d5a;
+}
+
+/* RC license section */
+.about-license{
+  background:
+    linear-gradient(
+      135deg,
+      rgba(47,127,211,.95),
+      rgba(11,45,90,.95)
+    ) !important;
+}
+
+/* Mission / Vision section background */
+.mission-vision{
+  position:relative;
+  background:
+    radial-gradient(circle at 30% 20%, rgba(47,127,211,.25), transparent 40%),
+    radial-gradient(circle at 80% 70%, rgba(47,127,211,.22), transparent 45%),
+    linear-gradient(135deg,#f7fbff,#ffffff);
+  padding:9rem 0;
+  overflow:hidden;
+}
+
+/* FAQ AI header */
+.chat-header{
+  background:
+    linear-gradient(135deg,#2f7fd3,#0b2d5a) !important;
+  color:white;
+  font-weight:700;
+  letter-spacing:.4px;
+}
+
+/* Small blue bars / accents */
+.section-line,
+.nav a.active{
+  background:var(--brand-blue) !important;
+}
+
+/* Floating WhatsApp */
+.whatsapp-float{
+  background:var(--brand-blue) !important;
+}
+/* ================= LICENSE PREMIUM ================= */
+
+.about-license{
+  text-align:center;
+  padding:10rem 0;
+}
+
+.about-license h2{
+  font-size:3rem;
+  letter-spacing:1px;
+}
+
+.license-list{
+  margin-top:3rem;
+  display:flex;
+  flex-direction:column;
+  gap:1.6rem;
+  font-size:1.05rem;
+  opacity:.95;
+}
+/* ============================================================
+   MID LIGHT BLUE SECTIONS — STRONGER THAN BEFORE
+============================================================ */
+
+:root{
+  --brand-blue:#2f7fd3;
+  --brand-blue-dark:#0b2d5a;
+
+  /* new mid light */
+  --brand-blue-soft:#cfe2ff;
+}
+
+/* ---------- MISSION / VALUES / SERVICES BACKGROUND ---------- */
+
+.mission-vision,
+.core-values,
+.services-section,
+.about-section{
+  background:
+    radial-gradient(circle at top,
+      rgba(47,127,211,.28),
+      rgba(47,127,211,.18) 45%,
+      rgba(47,127,211,.10) 80%
+    ) !important;
+}
+
+/* soft depth fade */
+.mission-vision::before,
+.core-values::before,
+.services-section::before,
+.about-section::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(47,127,211,.22),
+      transparent 40%,
+      transparent 60%,
+      rgba(47,127,211,.22)
+    );
+  pointer-events:none;
+}
+
+/* ---------- FAQ SEND BUTTON ---------- */
+
+.faq button,
+.faq-form button,
+.chat-form button,
+.contact-form button{
+  background:var(--brand-blue) !important;
+  color:white !important;
+}
+
+/* ---------- READ MORE / CTA ---------- */
+
+.ceo-btn,
+.ceo-readmore-btn{
+  background:var(--brand-blue) !important;
+  color:white !important;
+  border:none !important;
+}
+
+/* ---------- REMOVE LEFTOVER TEAL ---------- */
+
+[style*="#0b7f86"],
+[style*="#0c7c84"],
+[style*="11,127,134"]{
+  background:var(--brand-blue) !important;
+}
+
+/* ---------- SECTION HEADERS ---------- */
+
+.section-title,
+.values-title,
+.services-heading{
+  color:#0b2d5a !important;
+}
+/* ============================================================
+   PARTNERS + COUNTRIES + FLYERS — MATCH BLUE CANVAS
+============================================================ */
+
+/* Big section wrappers */
+
+.about-partners,
+.about-countries,
+.flyer-showcase{
+  background:
+    radial-gradient(circle at top,
+      rgba(47,127,211,.28),
+      rgba(47,127,211,.18) 45%,
+      rgba(47,127,211,.10) 80%
+    ) !important;
+  padding-top:7rem;
+  padding-bottom:7rem;
+}
+
+/* Soft vertical fade */
+
+.about-partners::before,
+.about-countries::before,
+.flyer-showcase::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(47,127,211,.22),
+      transparent 40%,
+      transparent 60%,
+      rgba(47,127,211,.22)
+    );
+  pointer-events:none;
+}
+
+/* Keep cards white */
+
+.partner-card,
+.countries-grid .country,
+.flyer-grid img{
+  background:white !important;
+}
+
+/* Section titles */
+
+.about-partners h2,
+.about-countries h2,
+.flyer-title{
+  color:#0b2d5a !important;
+}
+  /* ============================================================
+   MISSION TITLE — THICK DARK BRAND BLUE
+============================================================ */
+
+.mission-vision h2,
+.mission-vision .section-title,
+.mission-vision .mv-header{
+  color:var(--navy) !important;
+  font-weight:800;
+}
+/* Remove rogue horizontal section bars */
+section::before,
+section::after {
+  background: transparent !important;
+}
+
+/* ================= HERO — REMOVE SIDE IMAGE ================= */
+
+.hero-right{
+  display:none !important;
+}
+
+/* Make hero full width */
+.hero-content{
+  grid-template-columns:1fr !important;
+  text-align:left;
+}
+/* ================= HERO LOGO WATERMARK ================= */
+
+.hero-kingz{
+  position:relative;
+}
+
+.hero-kingz::after{
+  content:"";
+  position:absolute;
+  inset:0;
+
+  background:
+    url("images/logo.jpg") center/420px no-repeat;
+
+  opacity:.12;
+  z-index:1;
+  pointer-events:none;
+}
+.hero-kingz{
+  position:relative;
+  overflow:hidden;
+}
+
+.hero-content{
+  position:relative;
+  z-index:5;
+}
+
+/* =====================================================
+   HERO LOGO WATERMARK — FORCE VISIBLE
+===================================================== */
+
+.hero-kingz{
+  position:relative !important;
+  overflow:hidden;
+}
+
+/* Kill any other pseudo layers that block it */
+.hero-kingz::before{
+  content:none !important;
+}
+
+/* Logo watermark */
+.hero-kingz::after{
+  content:"";
+  position:absolute;
+  inset:0;
+
+background:
+  url("../images/logoo.png") center/380px no-repeat !important;
+
+
+
+ opacity:0.44;
+  z-index:2;
+  pointer-events:none;
+}
+
+/* Text stays above */
+.hero-content{
+  position:relative;
+  z-index:5 !important;
+}
+
+.quote-modal-overlay {
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(10,30,70,.75);
+  justify-content:center;
+  align-items:center;
+  z-index:9999;
+}
+
+.quote-modal-overlay.show{
+  display:flex;
+}
+
+.quote-modal-box{
+  background:#1f3b73;
+  color:white;
+  padding:3rem;
+  border-radius:18px;
+  max-width:520px;
+  width:90%;
+}
+
+.quote-modal-overlay{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(10,30,70,.85);
+  justify-content:center;
+  align-items:center;
+  z-index:99999;
+}
+
+.quote-modal-overlay.show{
+  display:flex;
+}
+
+/* ================= FIX MODALS ================= */
+
+#ceoModal{
+  z-index:999999 !important;
+}
+
+.quote-modal-overlay{
+  z-index:999999 !important;
+}
+
+/* Force visibility toggle */
+
+.quote-modal-overlay.show{
+  display:flex !important;
+}
+
+/* Kill overlay conflicts */
+
+.hero-kingz::after,
+.hero-kingz::before{
+  pointer-events:none;
+}
+/* ================= CEO MODAL HARD FIX ================= */
+
+#ceoModal{
+  display:none;
+  position:fixed;
+  inset:0;
+  justify-content:center;
+  align-items:center;
+  background:rgba(0,0,0,.75);
+  z-index:9999999 !important;
+}
+
+#ceoModal.show{
+  display:flex !important;
+}
+
+#ceoModal .ceo-modal-box{
+  background:white;
+}
+
+/* Kill overlay traps */
+
+#ceoModal::before,
+#ceoModal::after{
+  content:none !important;
+}
+/* ================= CEO MODAL — FINAL FIX ================= */
+
+.ceo-modal{
+  position:fixed;
+  inset:0;
+  background:rgba(8,25,55,.92);
+  display:none;
+  justify-content:center;
+  align-items:center;
+  z-index:999999;
+}
+
+.ceo-modal-box{
+  background:#0b2d5a;
+  color:white;
+  padding:4rem 4.5rem;
+  border-radius:22px;
+  max-width:900px;
+  width:92%;
+  max-height:85vh;
+  overflow-y:auto;
+  position:relative;
+}
+
+/* text readable */
+
+.ceo-modal-box h2,
+.ceo-modal-box h4,
+.ceo-modal-content p{
+  color:white;
+}
+
+/* close button */
+
+.ceo-close{
+  position:absolute;
+  top:18px;
+  right:22px;
+  font-size:30px;
+  cursor:pointer;
+  background:white;
+  color:#0b2d5a;
+  width:36px;
+  height:36px;
+  border-radius:50%;
+  border:none;
+}
+/* ================= GET QUOTE — FINAL BLUE DESIGN ================= */
+
+.quote-modal-overlay{
+  background:rgba(8,30,90,.92);
+}
+
+.quote-modal-box{
+  background:#1f3b73;
+  padding:4rem;
+  border-radius:26px;
+  max-width:560px;
+  width:92%;
+}
+
+.quote-modal-box h2{
+  font-size:2.2rem;
+}
+
+.quote-form input,
+.quote-form textarea{
+  width:100%;
+  padding:14px;
+  border-radius:10px;
+  border:none;
+  margin-bottom:14px;
+}
+
+.quote-form button{
+  background:#f5b700;
+  color:#0b2d5a;
+  border:none;
+  padding:14px;
+  border-radius:14px;
+  font-weight:700;
+  width:100%;
+}
+/* ================= CEO MODAL CLOSE BUTTON POSITION & SIZE ================= */
+
+.ceo-modal-box {
+  position: relative;
+}
+
+/* Top right small X */
+.ceo-modal-box .ceo-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 32px;
+  height: 32px;
+  font-size: 22px;
+  color: #0b2d5a;
+  background: white;
+  border-radius: 50%;
+  border: 2px solid #0b2d5a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background .2s, color .2s;
+}
+
+.ceo-modal-box .ceo-close:hover {
+  background: #0b2d5a;
+  color: white;
+}
+/* ================= CEO MODAL OVERRIDE ================= */
+
+.ceo-modal {
+  position: fixed !important;
+  inset: 0 !important;
+  background: rgba(0,0,0,.9) !important;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999 !important;
+}
+
+.ceo-modal-box {
+  background: #000 !important;
+  color: #fff !important;
+  width: 90%;
+  max-width: 1100px;
+  max-height: 85vh;
+  overflow-y: auto;
+  padding: 60px;
+  border-radius: 22px;
+  position: relative;
+}
+
+/* TEXT */
+
+.ceo-modal-box h2 {
+  color: #fff !important;
+  font-size: 34px;
+}
+
+.ceo-modal-box h4 {
+  color: #f4c430 !important;
+  margin-bottom: 25px;
+}
+
+.ceo-modal-content p {
+  color: #eaeaea !important;
+  line-height: 1.8;
+}
+
+/* CLOSE BUTTON */
+
+.ceo-close {
+  position: absolute;
+  top: 18px;
+  right: 22px;
+  font-size: 22px;
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+  .ceo-modal-content {
+    column-count: 1;
+  }
+}
+/* ===== FORCE CLOSE BUTTON TOP RIGHT ===== */
+
+.ceo-modal-box .ceo-close,
+.quote-modal-box .quote-close {
+  position: absolute !important;
+  top: 18px !important;
+  right: 20px !important;
+  left: auto !important;
+
+  font-size: 20px;
+  width: 36px;
+  height: 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  border: 2px solid white;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+}
+/* ================= ABOUT HERO LOGO WATERMARK ================= */
+
+.about-hero{
+  position:relative !important;
+  overflow:hidden;
+}
+
+/* remove blocking layers */
+.about-hero::before{
+  content:none !important;
+}
+
+/* watermark logo */
+.about-hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+
+  background:
+    url("../images/logoo.jpg") center/420px no-repeat;
+
+  opacity:0.25;
+  z-index:2;
+  pointer-events:none;
+}
+
+/* text above logo */
+.about-hero .container{
+  position:relative;
+  z-index:5;
+}
+/* ================= ABOUT HERO — FORCE LOGO ================= */
+
+.about-hero{
+  position:relative !important;
+  overflow:hidden !important;
+}
+
+/* hard override the blue fill */
+.about-hero{
+  background:
+    linear-gradient(
+      rgba(12,45,85,.75),
+      rgba(8,30,60,.75)
+    ) !important;
+}
+
+/* logo watermark */
+.about-hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+
+  background:
+    url("../images/logoo.png") center/420px no-repeat !important;
+
+  opacity:.30;
+  z-index:3;
+  pointer-events:none;
+}
+
+/* keep text above logo */
+.about-hero .container{
+  position:relative;
+  z-index:6;
+}
+/* ================= ABOUT HERO — RESTORE BLUE + KEEP LOGO ================= */
+
+.about-hero{
+  position: relative !important;
+  overflow: hidden;
+
+  /* original blue look */
+  background:
+    linear-gradient(
+      135deg,
+      rgba(47,127,211,.95),
+      rgba(11,31,63,.95)
+    ) !important;
+}
+
+/* Logo watermark stays */
+
+.about-hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+
+  background:
+    url("../images/logoo.jpg") center/420px no-repeat;
+
+  opacity:0.22;
+
+  z-index:2;
+  pointer-events:none;
+}
+
+/* Text stays above logo */
+
+.about-hero .container{
+  position:relative;
+  z-index:5;
+}
+/* =====================================================
+   MOBILE NAV — DROPDOWN UNDER HEADER (FINAL)
+===================================================== */
+
+.nav-toggle{
+  display:none;
+  background:none;
+  border:none;
+  font-size:28px;
+  cursor:pointer;
+  color:#2f7fd3;
+}
+
+/* ---------- MOBILE ---------- */
+
+@media(max-width:900px){
+
+  .nav-toggle{
+    display:block;
+  }
+
+  nav{
+    position:relative;
+  }
+
+  .nav-inner{
+    position:relative;
+    display:flex;
+    align-items:center;
+  }
+
+  /* dropdown panel */
+  nav ul{
+    position:absolute;
+    top:100%;
+    left:0;
+    width:100%;
+    background:white;
+
+    flex-direction:column;
+    gap:1.2rem;
+
+    padding:1.5rem 2rem;
+
+    border-top:3px solid var(--primary);
+
+    display:none;
+    z-index:9999;
+  }
+
+  nav ul.show{
+    display:flex;
+  }
+
+  nav ul li{
+    padding:.6rem 0;
+  }
+
+  nav a{
+    font-size:1.1rem;
+  }
+
+  /* ===== HEADER ROW POSITIONING ONLY ===== */
+
+  /* socials move right toward hamburger */
+  .nav-social{
+    margin-left:auto;
+    margin-right:42px;     /* close to hamburger */
+    gap:10px;              /* tighter icons */
+  }
+
+  /* extra air after logo */
+  nav img{
+    margin-right:20px;
+  }
+
+}
+
+/* ================================
+   HAMBURGER POSITION FIX ONLY
+================================ */
+
+@media(max-width:900px){
+
+  /* move hamburger to far right */
+  .nav-toggle{
+    position:absolute;
+    right:18px;
+    top:50%;
+    transform:translateY(-50%);
+  }
+
+}
+
